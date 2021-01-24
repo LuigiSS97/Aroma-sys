@@ -1,17 +1,21 @@
-import React from 'react';
-
+import React, { Component } from "react";
 import { Container, Label } from './styles';
 
-function Card() {
-  return( 
-    <Container>
-       <header>
-           <Label color="#87D1B4"/>
-           <p>Título</p>
-       </header>
-       <p>Corpo do lembrete</p>
-    </Container>
-)
+class Card extends Component {
+  
+  render(){
+    return( 
+      <Container>
+        <section>
+          <header>
+              <Label color="#87D1B4"/>
+              <h3>{this.props.titulo}</h3>
+          </header>
+          <p>{this.props.texto}</p>
+        </section>
+      </Container>
+    )
+  }
 }
 
 export default Card;

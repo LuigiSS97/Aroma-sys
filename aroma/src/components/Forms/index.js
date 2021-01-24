@@ -5,53 +5,51 @@ import { Container } from './styles';
 class Forms extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      titulo: '',
-      lembrete: ''
+    this.titulo = "";
+    this.texto= "";
     }
+  
+  _handlerTitulo(event) { 
+    event.stopPropagation();
+    this.titulo = event.target.value;
   }
-  handlerTitulo = event => {
-    this.setState({
-      titulo: event.target.value
-    })
+  _handlerTexto(event) {
+    event.stopPropagation();
+    this.texto =  event.target.value;
   }
-  handlerLembrete = event => {
-    this.setState({
-      lembrete: event.target.value
-    })
+  _criarNota (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.props.criarNota(this.titulo, this.texto);
   }
-  handlerSubmit = event => {
-    alert(`${this.state.titulo} ${this.state.lembrete}`)
-  }
-  render(){
+ 
+  render() {
     return (
     
       <Container>
-          <form className="form-cadastro " >
-              <label>Lembretes e Afazeres</label>
+        
+          <form className="form-cadastro " 
+            onSubmit={this._criarNota.bind(this)} 
+          >
+              <label>Lembretes e Notas</label> 
               <input 
-              type="text" 
-              placeholder="Título" 
-              className="form-cadastro_input"
-              value={this.state.titulo}
-              onChange={this.handlerTitulo}
+                type="text" 
+                placeholder="Título" 
+                className="form-cadastro_input"
+                onChange={this._handlerTitulo.bind(this)}
               />
               <textarea 
-              className="form-cadastro_input" 
-              placeholder="Descreva o lembrete"
-              value={this.state.lembrete}
-              onChange={this.handlerLembrete}
+                className="form-cadastro_input" 
+                placeholder="Descreva o lembrete"
+                onChange={this._handlerTexto.bind(this)}
               />  
-              <button 
-              onClick={this.handlerSubmit}
-              className="form-cadastro_input form-cadastro_submit" 
-              type="submit">Adicionar 
-                           
+              <button className="form-cadastro_input form-cadastro_submit"> 
+                Adicionar      
               </button>
           </form>
       </Container>
       
-    )
+    );
   }
 }
 

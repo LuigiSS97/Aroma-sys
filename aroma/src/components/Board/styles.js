@@ -16,5 +16,6 @@ export const Container = styled.div`
   }
   h2 {
     border-bottom: 1.5px solid #DFCEAD;
+    margin-top: 10px;
   }
 `;
