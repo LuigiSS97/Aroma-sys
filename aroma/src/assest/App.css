@@ -1,0 +1,4 @@
+.quadro-lembretes {
+    display: flex;
+    justify-content: space-between;
+}
