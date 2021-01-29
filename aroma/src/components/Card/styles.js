@@ -11,10 +11,14 @@ export const Container = styled.div`
     cursor:grab;
 
     header{
-        position: absolute;
-        top: -30px;
-        left: 15px;
+      position: absolute;
+      top: -30px;
+      left: 15px;
+      display: flex;
+      justify-content: space-between;
+      width: 80px;
     }
+    
     p {
         font-weight: 500;
         line-height: 20px;

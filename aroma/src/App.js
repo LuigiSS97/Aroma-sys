@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Forms from "./components/Forms";
 import Board from "./components/Board";
 import "./assest/App.css";
+import FormsErp from "./components/FormsErp";
 
 
 class App extends Component {
@@ -29,8 +30,11 @@ class App extends Component {
         <Forms criarNota={this.criarNota.bind(this)}/>
         <Board notas={this.state.notas}/>
       </div>
+      <FormsErp/>
+      
       <GlobalStyle/>
     </>
+   
     );
   }
 }

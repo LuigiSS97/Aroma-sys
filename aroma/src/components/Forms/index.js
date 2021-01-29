@@ -33,12 +33,14 @@ class Forms extends Component {
           >
               <label>Lembretes e Notas</label> 
               <input 
+                id="titulo-lembrete"
                 type="text" 
                 placeholder="Título" 
                 className="form-cadastro_input"
                 onChange={this._handlerTitulo.bind(this)}
               />
               <textarea 
+                id="corpo-lembrete"
                 className="form-cadastro_input" 
                 placeholder="Descreva o lembrete"
                 onChange={this._handlerTexto.bind(this)}

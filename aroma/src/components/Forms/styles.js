@@ -6,7 +6,7 @@ export const Container = styled.div`
   flex-grow: 2;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   z-index: 1;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   padding: 12px 40px;
@@ -26,7 +26,18 @@ export const Container = styled.div`
   width: 100%;
   background-color: #D5E8C1;
   color: white;
-  font-weight: 400;
+  font-weight: bolder;
+  font-size: 15px;
+}
+.form-cadastro_submit:hover {
+  background-color:#5F927E;
+  transition: 0.5s;
+}
+#corpo-lembrete {
+  padding: 30px 5px;
+}
+#titulo-lembrete{
+  padding: 10px 5px;
 }
 
 
