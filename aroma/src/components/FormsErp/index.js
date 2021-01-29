@@ -5,13 +5,12 @@ import InputNumber from 'rc-input-number';
 function FormsErp() {
     
     
-        
     return (
         <Container>
             <h2>Vendas</h2>
             <form>
                 <input type="text" placeholder="Nome da Cliente" className="form-cliente"/>
-                <input type="text" placeholder="Preço do Produto" className="form-preco"/>
+                <input type="money" placeholder="Preço do Produto" className="form-preco"/>
                 <div className="container-quantidade">
                 <label className="label-quantidade">Quantidade do Produto</label >
                     <InputNumber type="number" defaultValue={0} id="quantidade-produto"
@@ -19,6 +18,7 @@ function FormsErp() {
                 </div>
 
                 <textarea placeholder="Observações do Pedido"/>
+                <button className="botao-finalizar">Finalizar Pedido</button>
 
             </form>
         </Container>

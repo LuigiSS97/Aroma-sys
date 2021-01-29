@@ -17,7 +17,7 @@ export const Container = styled.div`
     align-items: flex-start;
   }
   .form-cliente, textarea {
-    width: 75vh;
+    width: 50vh;
     border-radius: 10px;
     border: none;
     margin-bottom: 10px;
@@ -40,4 +40,19 @@ export const Container = styled.div`
     border-radius: 7px;
     font-size: 15px;
   }
+  .botao-finalizar {
+    align-self: flex-start;
+    width: 15vh;
+    background-color: #D5E8C1;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 10px;
+  }
+  .botao-finalizar:hover {
+  background-color:#5F927E;
+  transition: 0.5s;
+}
 `;
