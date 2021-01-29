@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction:column;
   h2{
     text-align: center;
-    padding: 5px;
+    padding:10px 5px;
     border-bottom: 1.5px solid #DFCEAD;
   }
   form{

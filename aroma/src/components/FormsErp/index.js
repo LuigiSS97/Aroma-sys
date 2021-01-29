@@ -10,7 +10,14 @@ function FormsErp() {
             <h2>Vendas</h2>
             <form>
                 <input type="text" placeholder="Nome da Cliente" className="form-cliente"/>
+                <input type="date" placeholder="Data do pedido" className="form-cliente"/>
                 <input type="money" placeholder="Preço do Produto" className="form-preco"/>
+                <select className="form-preco">
+                    <option value="1">produto</option>
+                    <option value="1">produto</option>
+                    <option value="1">produto</option>
+                    <option value="1">produto</option>
+                </select>
                 <div className="container-quantidade">
                 <label className="label-quantidade">Quantidade do Produto</label >
                     <InputNumber type="number" defaultValue={0} id="quantidade-produto"
